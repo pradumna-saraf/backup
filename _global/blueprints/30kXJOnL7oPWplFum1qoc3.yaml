@@ -8,5 +8,5 @@ flow: |-
   <% for value in arg.values %>
     - id: log_<< value >>
       type: io.kestra.plugin.core.log.Log
-      message: Hello << value >>
+      message: Hellomkk << value >>
   <% endfor %>
