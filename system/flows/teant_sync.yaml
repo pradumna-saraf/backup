@@ -1,0 +1,15 @@
+id: teant_sync
+namespace: system
+tasks:
+  - id: git
+    type: io.kestra.plugin.git.TenantSync
+    sourceOfTruth: KESTRA
+    whenMissingInSource: DELETE
+    url: https://github.com/pradumna-saraf/backup
+    branch: main
+    username: git_username
+    password: "{{ secret('GITHUB_ACCESS_TOKEN') }}"
+    kestraUrl: "http://localhost:8080"
+    auth:
+      username: "psaraf@kestra.io"
+      password: "Kestra@123"

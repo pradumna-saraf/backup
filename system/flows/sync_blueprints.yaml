@@ -1,0 +1,10 @@
+id: sync_blueprints
+namespace: system
+tasks:
+  - id: commit_and_push
+    type: io.kestra.plugin.ee.git.SyncBlueprints
+    delete: true
+    url: https://github.com/pradumna-saraf/backup
+    username: pradumna-saraf
+    password: "{{ secret('GITHUB_ACCESS_TOKEN') }}"
+    branch: main
