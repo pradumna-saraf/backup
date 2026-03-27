@@ -1,0 +1,24 @@
+id: 3KnJ9DW5SiVQxqSp1w3PoT
+title: mosquito_564954
+description: The description of your blueprint.
+flow: |-
+  extend:
+    templateArguments:
+      - id: namespace
+        displayName: The flow namespace
+        type: STRING
+      - id: values
+        displayName: An array of values
+        type: MULTISELECT
+        values:
+          - value1
+          - value2
+          - value3
+  id: flow
+  namespace: << arg.namespace >>
+  tasks:
+  <% for value in arg.values %>
+    - id: log_<< value >>
+      type: io.kestra.plugin.core.log.Log
+      message: Hello << value >>
+  <% endfor %>
