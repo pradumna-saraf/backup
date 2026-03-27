@@ -7,7 +7,7 @@ tasks:
     whenMissingInSource: DELETE
     url: https://github.com/pradumna-saraf/backup
     branch: main
-    username: git_username
+    username: pradumna-saraf
     password: "{{ secret('GITHUB_ACCESS_TOKEN') }}"
     kestraUrl: "http://localhost:8080"
     auth:
