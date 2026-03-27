@@ -1,0 +1,12 @@
+id: 30kXJOnL7oPWplFum1qoc3
+title: squid_300978
+description: The description of your blueprint.
+flow: |-
+  id: flow
+  namespace: << arg.namespace >>
+  tasks:
+  <% for value in arg.values %>
+    - id: log_<< value >>
+      type: io.kestra.plugin.core.log.Log
+      message: Hello << value >>
+  <% endfor %>
