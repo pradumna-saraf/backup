@@ -4,7 +4,6 @@ tasks:
   - id: git
     type: io.kestra.plugin.git.TenantSync
     sourceOfTruth: KESTRA
-    whenMissingInSource: DELETE
     url: https://github.com/pradumna-saraf/backup
     branch: main
     username: pradumna-saraf
