@@ -1,6 +1,6 @@
 id: 30kXJOnL7oPWplFum1qoc3
 title: squid_300978
-description: The description of your blueprint.
+description: The description of ygfhgfhgfhgfhgfhour blueprint.
 flow: |-
   id: flow
   namespace: << arg.namespace >>
